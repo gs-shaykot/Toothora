@@ -12,22 +12,26 @@ const About = () => {
                     </div>
                     <div className='basis-1/2'>
                         {/* content */}
-                        <h1>Dedicated to Your Smile, Committed to Your Care</h1>
-                        <p>At Flossy Dental, we're committed to providing exceptional dental care in a comfortable and welcoming environment. Our team of experienced professionals uses the latest technology and techniques to ensure you receive the highest quality treatment tailored to your unique needs.</p>
-                        <div>
-                            <div>
-                                <div>
+                        <h1 className='font-ubuntu text-3xl font-extrabold mb-5 text-lekha'>Dedicated to Your Smile, Committed to Your Care</h1>
+                        <p className='text-gray-600 mb-4'>At Flossy Dental, we're committed to providing exceptional dental care in a comfortable and welcoming environment. Our team of experienced professionals uses the latest technology and techniques to ensure you receive the highest quality treatment tailored to your unique needs.</p>
+                        <div className='flex mb-4'>
+                            <div className='flex justify-between'>
+                                <div className='bg-[#dbeafe] p-4 rounded-full shadow-md h-12 w-12 text-lg mr-3'>
                                     <FaShieldAlt />
                                 </div>
-                                <h3>Insurance Support</h3>
-                                <p>We work with most major insurance providers to ensure affordable care.</p>
-                            </div>
-                            <div>
                                 <div>
+                                    <h3 className='text-lekha font-bold text-lg mb-1'>Insurance Support</h3>
+                                    <p className='text-gray-700'>We work with most major insurance providers to ensure affordable care.</p>
+                                </div>
+                            </div>
+                            <div className='flex justify-between'>
+                                <div className='bg-[#dbeafe] p-4 rounded-full shadow-md h-12 w-12 text-lg mr-3'>
                                     <FaUserDoctor />
                                 </div>
-                                <h3>Experienced Dentists</h3>
-                                <p>Our team has decades of combined experience in all areas of dentistry.</p>
+                                <div>
+                                    <h3 className='text-lekha font-bold text-lg mb-1'>Experienced Dentists</h3>
+                                    <p className='text-gray-700'>Our team has decades of combined experience in all areas of dentistry.</p>
+                                </div>
                             </div>
                         </div>
                         <button className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition-all !rounded-button whitespace-nowrap cursor-pointer">

@@ -9,8 +9,8 @@ const MainLayout = () => {
         <div className='font-roboto'>
             <Navbar />
             <Hero />
-            <About />
             <Services />
+            <About />
         </div>
     );
 };

@@ -11,7 +11,7 @@ const Hero = () => {
                         alt="Dental hero"
                         className="w-full h-full object-cover object-top"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
+                    <div className="absolute inset-0 h-screen bg-gradient-to-r from-white via-white/90 to-transparent"></div>
                 </div>
                 <div className="container mx-auto px-6 py-20 relative z-10">
                     <div className="max-w-xl">
