@@ -1,10 +1,12 @@
-import React from 'react'; 
-import Navbar from '../component/navbar'; 
+import React from 'react';
+import Navbar from '../component/navbar';
+import Hero from '../pages/Home/Hero';
 
 const MainLayout = () => {
     return (
         <div className='font-roboto'>
-            <Navbar/> 
+            <Navbar />
+            <Hero />
         </div>
     );
 };
