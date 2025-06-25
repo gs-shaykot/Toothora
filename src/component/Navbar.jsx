@@ -1,3 +1,4 @@
+// fixed the navbar to top
 import React from 'react';
 const NavItems = () => (
     <>
@@ -12,7 +13,7 @@ const NavItems = () => (
 
 const Navbar = () => {
     return (
-        <div className='border-b-2 border-gray-200 '>
+        <div className='border-b-2 border-gray-200 fixed top-0 left-0 w-full z-50 bg-base-100 '>
             <div className="container mx-auto navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">

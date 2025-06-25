@@ -4,7 +4,7 @@ import { FaStar } from 'react-icons/fa';
 const Hero = () => {
     return (
         <div>
-            <section className="relative overflow-hidden">
+            <section className="relative top-16 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src="https://i.ibb.co/VWG6wwG7/e4e42014b3a47c4a89f9614fd64dda71.jpg"
