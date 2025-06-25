@@ -4,12 +4,17 @@ import { MdEmail } from 'react-icons/md';
 import Iframe from 'react-iframe';
 import ContactForm from './ContactForm';
 import Additional from './Additional';
-
+import { useForm } from "react-hook-form";
+import { useState } from "react";
 const Contact = () => {
+    const { register, handleSubmit, reset } = useForm(); 
+
+    const onSubmit = (data) => {
+        // document.getElementById("my_modal_3").close();
+        console.log(data); // send to server if needed 
+    };
     return (
         <section className="contact">
-
-            {/* Background Header with Overlay */}
             <div
                 className="relative bg-cover bg-center bg-no-repeat text-white"
                 style={{ backgroundImage: "url('https://i.ibb.co/XZ62NFpt/con.jpg')" }}
@@ -24,7 +29,7 @@ const Contact = () => {
                         Reach out to our friendly team today.
                     </p>
 
-                    {/* Contact Info Row */}
+                    {/* Contact Info */}
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center text-lg mb-8">
                         <div className="flex items-center gap-2">
                             <FaPhoneAlt className="text-blue-300" />
@@ -40,7 +45,9 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <button className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition">
+                    <button
+                        onClick={() => document.getElementById('my_modal_3').showModal()}
+                        className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition">
                         Book an Appointment
                     </button>
                 </div>
@@ -110,10 +117,103 @@ const Contact = () => {
                 </div>
             </div>
 
-            {/* Extra Components */}
             <ContactForm />
             <Additional />
-        </section> 
+
+            <dialog id="my_modal_3" className="modal">
+                <div className="modal-box w-full max-w-md">
+                    <form method="dialog" className="absolute right-2 top-2">
+                        <button className="btn btn-sm btn-circle btn-ghost">✕</button>
+                    </form>
+
+                    <h2 className="text-xl font-bold mb-4">Book an Appointment</h2>
+                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text text-gray-800">Full Name:</span>
+                            </label>
+                            <input
+                                {...register("fullName", { required: true })}
+                                type="text"
+                                placeholder="Full Name"
+                                className="input input-bordered w-full"
+                            />
+                        </div>
+
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text text-gray-800">Email:</span>
+                            </label>
+                            <input
+                                {...register("email", { required: true })}
+                                type="email"
+                                placeholder="Email Address"
+                                className="input input-bordered w-full"
+                            />
+                        </div>
+
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text text-gray-800">Phone:</span>
+                            </label>
+                            <input
+                                {...register("phone", { required: true })}
+                                type="tel"
+                                placeholder="Phone Number"
+                                className="input input-bordered w-full"
+                            />
+                        </div>
+
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text text-gray-800">Select Doctor:</span>
+                            </label>
+                            <select {...register("doctor", { required: true })} className="select select-bordered w-full">
+                                <option disabled selected value="">Select Doctor</option>
+                                <option>Dr. John Smith</option>
+                                <option>Dr. Sarah Lee</option>
+                            </select>
+                        </div>
+
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text text-gray-800">Preferred Date:</span>
+                            </label>
+                            <input
+                                {...register("date", { required: true })}
+                                type="date"
+                                className="input input-bordered w-full"
+                            />
+                        </div>
+
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text text-gray-800">Preferred Time:</span>
+                            </label>
+                            <select {...register("time", { required: true })} className="select select-bordered w-full">
+                                <option disabled selected value="">Preferred Time</option>
+                                <option>9:00 AM</option>
+                                <option>11:00 AM</option>
+                                <option>2:00 PM</option>
+                            </select>
+                        </div>
+
+                        <textarea
+                            {...register("reason", { required: true })}
+                            placeholder="Please briefly describe your dental concern…"
+                            className="textarea textarea-bordered w-full"
+                        />
+                        <div className="flex justify-end gap-3 pt-2">
+                            <form method="dialog">
+                                <button className="btn btn-ghost">Cancel</button>
+                            </form>
+                            <button type="submit" className="btn btn-primary">Book Appointment</button>
+                        </div>
+                    </form>
+
+                </div>
+            </dialog>
+        </section>
     );
 };
 

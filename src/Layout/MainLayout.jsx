@@ -26,6 +26,8 @@ const MainLayout = () => {
             <Outlet />
             <Footer />
 
+
+
             {showButton && (
                 <button
                     onClick={scrollToTop}
@@ -35,8 +37,6 @@ const MainLayout = () => {
                     <FaArrowUp className="text-xl" />
                 </button>
             )}
-
-            
         </div>
     );
 };
