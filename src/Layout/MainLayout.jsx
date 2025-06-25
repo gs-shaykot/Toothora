@@ -1,5 +1,4 @@
-import React from 'react';
-import Navbar from '../component/navbar';
+import Navbar from '../component/Navbar'
 import Hero from '../pages/Home/Hero';
 import Services from '../pages/Home/Services';
 import About from '../pages/Home/About';

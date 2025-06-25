@@ -9,6 +9,7 @@ const NavItems = () => (
         <li><a className='hover:text-primary bg-none !text-base'>Contact Us</a></li>
     </>
 );
+
 const Navbar = () => {
     return (
         <div className='border-b-2 border-gray-200 '>
