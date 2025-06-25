@@ -72,13 +72,19 @@ const Team = () => {
                                             <p className="text-blue-500 font-medium mb-4">{member.position}</p>
                                             <p className="text-gray-600 mb-6">{member.description}</p>
                                             <div className="flex justify-center space-x-4">
-                                                <a href={member.socialLinks.linkedin} className="text-gray-600 hover:text-blue-500 transition-colors text-xl">
+                                                <a href={member.socialLinks.linkedin}
+                                                    target='_blank'
+                                                    className="text-gray-600 hover:text-blue-500 transition-colors text-xl">
                                                     <FaLinkedin />
                                                 </a>
-                                                <a href={member.socialLinks.twitter} className="text-gray-600 hover:text-blue-500 transition-colors text-xl">
+                                                <a href={member.socialLinks.twitter}
+                                                    target='_blank'
+                                                    className="text-gray-600 hover:text-blue-500 transition-colors text-xl">
                                                     <FaXTwitter />
                                                 </a>
-                                                <a href={member.socialLinks.whatsApp} className="text-gray-600 hover:text-blue-500 transition-colors text-xl">
+                                                <a href={member.socialLinks.whatsApp}
+                                                    target='_blank'
+                                                    className="text-gray-600 hover:text-blue-500 transition-colors text-xl">
                                                     <FaWhatsappSquare />
                                                 </a>
                                             </div>
