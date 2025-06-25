@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Blogs = () => {
     const Blogs = [
@@ -32,7 +33,7 @@ const Blogs = () => {
                         <div className="w-full h-full bg-red-200 rounded-l-full opacity-30"></div>
                     </div>
                 </div>
-                <div className="container mx-auto px-6">
+                <div className="container mx-auto px-6 relative z-10">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold mb-4">Insights For A Healthier Smile</h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">Stay informed with the latest dental tips, news, and advice from our expert team.</p>
@@ -60,9 +61,9 @@ const Blogs = () => {
 
                     </div>
                     <div className="text-center mt-10">
-                        <button className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition-all !rounded-button whitespace-nowrap cursor-pointer">
+                        <Link to='/blog' className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition-all !rounded-button whitespace-nowrap cursor-pointer">
                             View All Articles
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>
