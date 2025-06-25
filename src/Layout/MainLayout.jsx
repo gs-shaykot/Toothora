@@ -6,6 +6,7 @@ import About from '../pages/Home/About';
 import Review from '../pages/Home/Review';
 import Team from '../pages/Home/Team';
 import WhyToChoose from '../pages/Home/WhyToChoose';
+import Blogs from '../pages/Home/Blogs';
 
 const MainLayout = () => {
     return (
@@ -17,6 +18,7 @@ const MainLayout = () => {
             <Review />
             <Team />
             <WhyToChoose />
+            <Blogs />
         </div>
     );
 };
