@@ -21,9 +21,9 @@ const Hero = () => {
                             <button className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition-all !rounded-button whitespace-nowrap cursor-pointer">
                                 Book an Appointment
                             </button>
-                            <button className="border-2 border-blue-500 text-blue-500 px-6 py-3 rounded-lg hover:bg-blue-50 transition-all !rounded-button whitespace-nowrap cursor-pointer">
+                            <a href='#services' className="border-2 border-blue-500 text-blue-500 px-6 py-3 rounded-lg hover:bg-blue-50 transition-all !rounded-button whitespace-nowrap cursor-pointer">
                                 Our Services
-                            </button>
+                            </a>
                         </div>
                         <div className="mt-8 flex items-center">
                             <div className="bg-blue-50 px-3 py-1 rounded-full flex items-center">

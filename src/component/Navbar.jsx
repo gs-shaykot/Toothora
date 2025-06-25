@@ -55,7 +55,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn bg-primary hover:bg-secondary text-white">Contact Us</a>
+                    <Link to='/contact' className="btn bg-primary hover:bg-secondary text-white">Contact Us</Link>
                 </div>
             </div>
         </div>
