@@ -11,7 +11,7 @@ export default {
         ubuntu: ['Ubuntu', 'sans-serif'],
       },
       colors: {
-        primary: '#a092f6',
+        primary: '#3b82f6',
         secondary: '#2563eb', 
         lekha: '#18181b'
       },

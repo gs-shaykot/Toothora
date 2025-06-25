@@ -36,7 +36,7 @@ const Navbar = () => {
                             <NavItems/>
                         </ul>
                     </div>
-                    <a className="text-2xl text-primary font-bold">Toothora</a>
+                    <a className="text-2xl text-blue-500  font-bold">Toothora</a>
                 </div>
                 <div className="navbar-center hidden lg:flex"> 
                     <ul className="menu !no_bg menu-horizontal px-1">
