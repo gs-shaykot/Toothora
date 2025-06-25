@@ -40,7 +40,7 @@ const ContactForm = () => {
 
 
     return (
-        <div className="max-w-3xl mx-auto my-10 p-6 bg-white rounded-lg shadow">
+        <div className="w-11/12 md:max-w-3xl mx-auto my-10 p-6 bg-white rounded-lg shadow">
             <h2 className="text-2xl font-bold text-center mb-2">Get in Touch</h2>
             <p className="text-center text-gray-500 mb-6">
                 Fill out the form below, and our team will get back to you shortly.
