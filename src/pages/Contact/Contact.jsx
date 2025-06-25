@@ -15,7 +15,7 @@ const Contact = () => {
 
     const onSubmit = async (data) => {
         try {
-            const response = await axios.post('http://localhost:5000/api/bookingAppoinments', data);
+            const response = await axios.post('https://toothora-server.onrender.com/api/bookingAppoinments', data);
 
             const { serial } = response.data;
 
