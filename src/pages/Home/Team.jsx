@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaLinkedin, FaWhatsappSquare } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Team = () => {
     const teamMembers = [
@@ -10,7 +12,7 @@ const Team = () => {
             socialLinks: {
                 linkedin: "#",
                 twitter: "#",
-                instagram: "#",
+                whatsApp: "#",
             }
         },
         {
@@ -21,7 +23,7 @@ const Team = () => {
             socialLinks: {
                 linkedin: "#",
                 twitter: "#",
-                instagram: "#",
+                whatsApp: "#",
             }
         },
         {
@@ -32,7 +34,7 @@ const Team = () => {
             socialLinks: {
                 linkedin: "#",
                 twitter: "#",
-                instagram: "#",
+                whatsApp: "#",
             }
         },
     ]
@@ -64,9 +66,27 @@ const Team = () => {
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                     </div>
+                                    <div className="p-8 relative bg-white">
+                                        <div className="text-center">
+                                            <h3 className="text-2xl font-bold mb-2 text-gray-800">{member.name}</h3>
+                                            <p className="text-blue-500 font-medium mb-4">{member.position}</p>
+                                            <p className="text-gray-600 mb-6">{member.description}</p>
+                                            <div className="flex justify-center space-x-4">
+                                                <a href={member.socialLinks.linkedin} className="text-gray-600 hover:text-blue-500 transition-colors text-xl">
+                                                    <FaLinkedin />
+                                                </a>
+                                                <a href={member.socialLinks.twitter} className="text-gray-600 hover:text-blue-500 transition-colors text-xl">
+                                                    <FaXTwitter />
+                                                </a>
+                                                <a href={member.socialLinks.whatsApp} className="text-gray-600 hover:text-blue-500 transition-colors text-xl">
+                                                    <FaWhatsappSquare />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             ))
-                        } 
+                        }
                     </div>
                 </div>
             </section>
