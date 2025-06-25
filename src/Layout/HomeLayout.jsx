@@ -10,16 +10,14 @@ import Footer from '../component/Footer';
 
 const HomeLayout = () => {
     return (
-        <div className='font-roboto'>
-            <Navbar />
+        <div className='font-roboto'> 
             <Hero />
             <Services />
             <About />
             <Review />
             <Team />
             <WhyToChoose />
-            <Blogs />
-            <Footer />
+            <Blogs /> 
         </div>
     );
 };

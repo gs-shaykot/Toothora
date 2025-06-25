@@ -10,8 +10,13 @@
   border: none !important;
 }
 
-.menu :where(li) > *:not(ul, .menu-title, details, .btn):active, .menu :where(li) > *:not(ul, .menu-title, details, .btn).menu-active, .menu :where(li) > details > summary:active {
-  background-color: transparent !important; 
+.menu :where(li)>*:not(ul, .menu-title, details, .btn):active,
+.menu :where(li)>*:not(ul, .menu-title, details, .btn).menu-active,
+.menu :where(li)>details>summary:active {
+  background-color: transparent !important;
   color: #a092f6 !important;
 }
 
+.active {
+  color: #3b82f6;
+}

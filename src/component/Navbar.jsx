@@ -1,16 +1,16 @@
 // fixed the navbar to top
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 const NavItems = () => (
     <>
         <li> 
-            <Link to='/' className='hover:text-primary bg-none !text-base'>Home</Link>
+            <NavLink to='/' className='hover:text-primary bg-none font-semibold !text-base'>Home</NavLink>
         </li> 
         <li> 
-            <Link to='/blog' className='hover:text-primary bg-none !text-base'>Blog</Link>
+            <NavLink to='/blog' className='hover:text-primary bg-none font-semibold !text-base'>Blog</NavLink>
         </li>
         <li> 
-            <Link to='/contact' className='hover:text-primary bg-none !text-base'>Contact Us</Link>
+            <NavLink to='/contact' className='hover:text-primary bg-none font-semibold !text-base'>Contact Us</NavLink>
         </li>
     </>
 );
