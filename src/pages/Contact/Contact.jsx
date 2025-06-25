@@ -6,13 +6,51 @@ import ContactForm from './ContactForm';
 import Additional from './Additional';
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-const Contact = () => {
-    const { register, handleSubmit, reset } = useForm(); 
+import axios from 'axios';
+import emailjs from '@emailjs/browser';
 
-    const onSubmit = (data) => {
-        // document.getElementById("my_modal_3").close();
-        console.log(data); // send to server if needed 
+const Contact = () => {
+    const { register, handleSubmit, reset } = useForm();
+
+    const onSubmit = async (data) => {
+        try {
+            const response = await axios.post('http://localhost:5000/api/bookingAppoinments', data);
+
+            const { serial } = response.data;
+
+            const emailParams = {
+                to_email: data.email,
+                to_name: data.fullName,
+                user_phone: data.phone,
+                selected_doctor: data.doctor,
+                booking_date: data.date,
+                booking_time: data.time,
+                serial_no: serial,
+            };
+
+            await emailjs.send(
+                import.meta.env.VITE_serviceId2,
+                import.meta.env.VITE_templateId2,
+                emailParams,
+                import.meta.env.VITE_publicKey2,
+            );
+
+
+            alert(`Booking successful! Your serial number is ${serial}`);
+            reset();
+            document.getElementById("my_modal_3").close();
+
+        } catch (err) {
+            if (err.response && err.response.data && err.response.data.message) {
+                alert(err.response.data.message); // Server error (e.g., 20 serial full)
+            } else {
+                console.error("Booking failed", err);
+                alert("Something went wrong. Try again.");
+            }
+        }
     };
+
+
     return (
         <section className="contact">
             <div

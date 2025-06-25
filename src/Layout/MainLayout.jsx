@@ -25,9 +25,7 @@ const MainLayout = () => {
             <Navbar />
             <Outlet />
             <Footer />
-
-
-
+ 
             {showButton && (
                 <button
                     onClick={scrollToTop}
