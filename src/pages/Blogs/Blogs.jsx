@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaSearch, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Blogs = () => {
     const [activeTab, setActiveTab] = useState("recent");
@@ -83,8 +84,7 @@ const Blogs = () => {
 
     return (
         <div>
-            <div className="min-h-screen bg-white">
-                {/* Header */}
+            <div className="min-h-screen bg-white"> 
                 <section className="bg-blue-50 py-16 text-center">
                     <div className="container mx-auto px-4">
                         <h1 className="text-4xl font-bold text-gray-800 mb-4">Dental Health Insights & News</h1>
@@ -133,7 +133,7 @@ const Blogs = () => {
                                         <div className="flex items-center text-xs text-gray-500 mb-4 gap-2">
                                             <span>{post.date}</span> • <span>{post.readTime}</span>
                                         </div>
-                                        <a href="#" className="text-blue-600 font-medium text-sm">Read More →</a>
+                                        <Link to="/blogDetails" className="text-blue-600 font-medium text-sm">Read More →</Link>
                                     </div>
                                 </div>
                             ))}
