@@ -7,6 +7,7 @@ import Review from '../pages/Home/Review';
 import Team from '../pages/Home/Team';
 import WhyToChoose from '../pages/Home/WhyToChoose';
 import Blogs from '../pages/Home/Blogs';
+import Footer from '../component/Footer';
 
 const MainLayout = () => {
     return (
@@ -19,6 +20,7 @@ const MainLayout = () => {
             <Team />
             <WhyToChoose />
             <Blogs />
+            <Footer />
         </div>
     );
 };
