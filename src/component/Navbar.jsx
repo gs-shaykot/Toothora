@@ -33,12 +33,18 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <NavItems/>
+                            <NavItems />
                         </ul>
                     </div>
-                    <a className="text-2xl text-blue-500  font-bold">Toothora</a>
+                    <div className="flex items-center justify-center" >
+                        <img
+                            src="https://i.ibb.co/3yDkTx6Y/Animation-1750845973834.gif"
+                            alt="Toothora Logo"
+                            className="w-10 h-10 rounded-full" />
+                        <a className="text-2xl text-blue-500  font-bold">Toothora</a>
+                    </div>
                 </div>
-                <div className="navbar-center hidden lg:flex"> 
+                <div className="navbar-center hidden lg:flex">
                     <ul className="menu !no_bg menu-horizontal px-1">
                         <NavItems />
                     </ul>
