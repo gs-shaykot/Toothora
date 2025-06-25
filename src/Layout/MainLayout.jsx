@@ -3,6 +3,7 @@ import Navbar from '../component/navbar';
 import Hero from '../pages/Home/Hero';
 import Services from '../pages/Home/Services';
 import About from '../pages/Home/About';
+import Review from '../pages/Home/Review';
 
 const MainLayout = () => {
     return (
@@ -11,6 +12,7 @@ const MainLayout = () => {
             <Hero />
             <Services />
             <About />
+            <Review />
         </div>
     );
 };
