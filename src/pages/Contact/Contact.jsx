@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import axios from 'axios';
 import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -35,8 +36,12 @@ const Contact = () => {
                 import.meta.env.VITE_publicKey2,
             );
 
-
-            alert(`Booking successful! Your serial number is ${serial}`);
+            Swal.fire({
+                icon: 'success',
+                title: 'Booking Successful',
+                text: `Your appointment has been booked successfully! Serial Number: ${serial}`,
+                confirmButtonText: 'OK' 
+            }) 
             reset();
             document.getElementById("my_modal_3").close();
 
@@ -45,7 +50,12 @@ const Contact = () => {
                 alert(err.response.data.message); // Server error (e.g., 20 serial full)
             } else {
                 console.error("Booking failed", err);
-                alert("Something went wrong. Try again.");
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Booking Failed',
+                    text: 'Something went wrong. Please try again later.',
+                    confirmButtonText: 'OK'
+                }) 
             }
         }
     };
