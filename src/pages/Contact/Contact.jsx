@@ -7,30 +7,44 @@ import Additional from './Additional';
 
 const Contact = () => {
     return (
-        <section className="contact mt-16">
-            <div className='bg-[#eff6ff] flex flex-col items-center justify-center'>
-                <div className="pt-20 flex flex-col items-center  justify-center">
-                    <h1 className='font-ubuntu font-extrabold text-4xl mb-4'>Contact Us</h1>
-                    <p className='text-xl text-center text-[#4b5563]'>We're here to answer your questions and provide the dental care you deserve. Reach out to our <br /> friendly team today.</p>
+        <section className="contact  ">
+            <div
+                className="relative bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-white"
+                style={{ backgroundImage: "url('https://i.ibb.co/XZ62NFpt/con.jpg')" }}
+            >
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-[#00000088] backdrop-brightness-75"></div>
+
+                {/* Content */}
+                <div className="relative z-10 w-full px-4 md:px-8 lg:px-16 py-20 text-center">
+                    <h1 className="font-ubuntu font-extrabold text-4xl mb-4">Contact Us</h1>
+                    <p className="text-xl text-gray-200 mb-6">
+                        We're here to answer your questions and provide the dental care you deserve.
+                        <br className="hidden md:block" />
+                        Reach out to our friendly team today.
+                    </p>
+
+                    {/* Contact Info */}
+                    <div className="flex flex-col md:flex-row gap-6 justify-center items-center text-lg mb-8">
+                        <div className="flex items-center gap-2">
+                            <FaPhoneAlt className="text-blue-300" />
+                            <p>+8801515267655</p>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <MdEmail className="text-blue-300" />
+                            <p>shaykotkhan1916@gmail.com</p>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <FaClock className="text-blue-300" />
+                            <p>Mon–Fri: 8AM–6PM</p>
+                        </div>
+                    </div>
+
+                    {/* Button */}
+                    <button className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition-all">
+                        Book an Appointment
+                    </button>
                 </div>
-                <div className='flex gap-8 mt-5 mb-10'>
-                    <div className='flex items-center gap-2 text-lg'>
-                        <FaPhoneAlt className='text-primary' />
-                        <p>+8801515267655</p>
-                    </div>
-                    <div className='flex items-center gap-2 '>
-                        <MdEmail className='text-primary' />
-                        <p>shaykotkhan1916@gmail.com</p>
-                    </div>
-                    <div className='flex items-center gap-2 '>
-                        <FaClock className='text-primary' />
-                        <p>Mon-Fri: 8AM-6PM</p>
-                    </div>
-                </div>
-                <button
-                    className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition-all !rounded-button whitespace-nowrap cursor-pointer mb-20">
-                    Book an Appointment
-                </button>
             </div>
 
             <div className="flex flex-col md:flex-row justify-center gap-4 py-14">

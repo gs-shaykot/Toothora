@@ -53,11 +53,6 @@ const Services = () => {
                         }
 
                     </div>
-                    <div className="text-center mt-10">
-                        <button className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition-all !rounded-button whitespace-nowrap cursor-pointer">
-                            See More Services
-                        </button>
-                    </div>
                 </div>
             </section>
         </div>
